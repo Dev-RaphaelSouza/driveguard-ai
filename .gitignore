@@ -1,0 +1,24 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Dados locais do usuário (histórico, configurações, logs) — nunca versionar
+data/
+
+# Saídas do PyInstaller
+build/
+dist/
+
+# Download incompleto do modelo
+assets/models/*.download
+
+# Editores e sistema
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

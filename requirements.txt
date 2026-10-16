@@ -1,0 +1,21 @@
+# Dependências de execução do DriveGuard AI.
+# Versões fixadas e testadas em Windows 11 + Python 3.14.7 (out/2026).
+# Todas publicam wheels para Python 3.11–3.14 no Windows x64.
+
+# Detecção facial (Face Landmarker). A versão 1.x é uma DLL nativa (ctypes)
+# e exige opencv-contrib-python.
+mediapipe==1.1.1
+
+# IMPORTANTE: use somente opencv-contrib-python. NÃO instale também
+# "opencv-python": os dois fornecem o módulo cv2 e conflitam entre si.
+opencv-contrib-python==5.0.0.93
+
+# 2.4.x é a série mais recente com wheels para Python 3.11 E 3.14.
+numpy==2.4.6
+
+# Apenas os módulos essenciais do Qt (Widgets, SVG). O metapacote "PySide6"
+# traria WebEngine/PDF (centenas de MB) que o projeto não usa.
+PySide6-Essentials==6.12.0
+
+# Reprodução dos alertas sonoros (PortAudio). Também é dependência do MediaPipe.
+sounddevice==0.5.6
